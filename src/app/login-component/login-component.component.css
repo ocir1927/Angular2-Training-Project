@@ -1,0 +1,22 @@
+#login-comp{
+    /* height: 100%;
+    width: 100%;
+    background-image: url("/assets/images/bg_login.jpg"); */
+}
+
+.login-card{
+    margin: auto;
+    width: 20%;
+}
+
+.example-header-image {
+    margin: auto;
+    background-image: url("/assets/images/unknown-user.png");
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+  }
+
+#login-button{
+    margin: auto;
+}

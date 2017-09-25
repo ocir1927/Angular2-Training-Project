@@ -1,0 +1,3 @@
+<textarea rows="10" cols="60" [attr.maxlength]="maxChars" #tweetText (keyup)="recalc(tweetText.value)"></textarea>
+<p id="leftChars">{{remainChars}} characters left</p>
+<button (click)='sendMessage(tweetText.value) ; tweetText.value="" ; remainChars=maxChars'>Send</button>

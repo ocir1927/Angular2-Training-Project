@@ -1,0 +1,10 @@
+    <md-form-field>
+      <input mdInput placeholder="Email" maxlength="50" [formControl]="emailFormControl">
+      <md-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+      </md-error>
+      <md-error *ngIf="emailFormControl.hasError('pattern')">
+        Please enter a valid email address
+      </md-error>
+
+    </md-form-field>
