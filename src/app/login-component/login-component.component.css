@@ -20,3 +20,8 @@
 #login-button{
     margin: auto;
 }
+
+.credentials{
+    display: flex;
+    flex-direction: column;
+}
