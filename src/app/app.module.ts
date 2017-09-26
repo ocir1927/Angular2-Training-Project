@@ -5,7 +5,8 @@ import {
   MdError,
   MdCheckboxModule,
   MdButtonModule,
-  MdCardModule
+  MdCardModule,
+  MatIconModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -20,7 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'
 import { appRoutes } from './app.routes';
-import { TodoComponent } from './todo/todo.component'
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { TodoComponent } from './todo/todo.component'
     LoginComponent,
     InputEmailComponent,
     InputPasswordComponent,
-    TodoComponent
+    TodoComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -39,6 +40,7 @@ import { TodoComponent } from './todo/todo.component'
     MdButtonModule,
     MdCheckboxModule,
     MdCardModule,
+    MatIconModule,
 
     FormsModule,
     ReactiveFormsModule

@@ -1,0 +1,22 @@
+ul {
+    list-style-type: none;
+  }
+.todos-card{
+  margin: auto;
+  width: 400px;
+}
+
+.todo-item{
+  /* display: flex; */
+  display: inline-block;
+  width: 380px;
+}
+.delete-button{
+  /* align-self:flex-end; */
+  float: right;
+}
+
+.todo-done{
+  color: #868585;
+  text-decoration-line: line-through;
+}

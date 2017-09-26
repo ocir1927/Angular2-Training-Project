@@ -1,2 +1,16 @@
 <H1>TODOS</H1>
-<input>
+<md-card class="todos-card">
+    <md-form-field>
+        <input mdInput #newTodo placeholder="What needs to be done" (keyup.enter)="addTodo(newTodo.value);newTodo.value=''">
+    </md-form-field>
+    <!-- <app-todo-item *ngFor="let todo of todos" [todoItem]=todo></app-todo-item> -->
+    <md-card-content>
+        <div *ngFor="let todo of todos" class="todo-item">
+            <md-checkbox [(ngModel)]="todo.checked" (change)="updateTodo(todo)"></md-checkbox>
+            <span [ngClass]="{'todo-done': todo.checked, 'todo-not-done': !todo.checked }">{{todo.task}}</span>
+            <button md-icon-button color="accent" (click)="removeTodo(todo)" class="delete-button">
+                <md-icon>close</md-icon>
+            </button>
+        </div>
+    </md-card-content>
+</md-card>
