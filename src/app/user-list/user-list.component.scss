@@ -1,0 +1,14 @@
+:host{
+    display: inline-block;
+}
+.users-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.user-card{
+    margin-top: 30px;
+    width:300px;
+    height: 460px;
+}

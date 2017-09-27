@@ -1,0 +1,16 @@
+<md-form-field>
+  <input mdInput placeholder="Search for user">
+</md-form-field>
+
+<div class="users-content">
+  <md-card *ngFor="let user of users" class="user-card">
+    <md-card-header>
+      <md-card-title>{{user.login}}</md-card-title>
+      <md-card-subtitle>{{user.url}}</md-card-subtitle>
+    </md-card-header>
+    <img md-card-image src="{{user.avatar_url}}" alt="User avatar">
+    <md-card-actions>
+      <button md-button (click)="goToUserDetails(user.login)">See more details</button>
+    </md-card-actions>
+  </md-card>
+</div>

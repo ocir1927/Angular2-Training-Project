@@ -1,0 +1,14 @@
+<md-card *ngIf="userDetails" class="user-details-card">
+  <md-card-content>
+    <md-card-title>{{userDetails.login}}</md-card-title>
+    <md-card-subtitle>{{userDetails.name}}</md-card-subtitle>
+  </md-card-content>
+  <img md-card-image src="{{userDetails.avatar_url}}" alt="User avatar">
+  <md-card-content>
+    <p>Url:{{userDetails.url}}</p>
+    <p>Type:{{userDetails.type}}</p>
+    <p>Company:{{userDetails.company}}</p>
+    <p>Location:{{userDetails.location}}</p>
+    <p>Created Ad:{{userDetails.created_at | date}}</p>
+  </md-card-content>
+</md-card>

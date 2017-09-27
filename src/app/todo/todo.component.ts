@@ -42,7 +42,6 @@ export class TodoItem {
   task: string;
   checked: boolean;
 
-
   constructor(task: string) {
     this.task = task;
     this.checked = false;

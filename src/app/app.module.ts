@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import {
   MdInputModule,
+  MdListModule,
   MdError,
   MdCheckboxModule,
   MdButtonModule,
@@ -22,6 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'
 import { appRoutes } from './app.routes';
 import { TodoComponent } from './todo/todo.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserDetailsComponent } from './user-list/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,8 @@ import { TodoComponent } from './todo/todo.component';
     InputEmailComponent,
     InputPasswordComponent,
     TodoComponent,
+    UserListComponent,
+    UserDetailsComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -41,8 +47,9 @@ import { TodoComponent } from './todo/todo.component';
     MdCheckboxModule,
     MdCardModule,
     MatIconModule,
-
+    MdListModule,
     FormsModule,
+    HttpModule,
     ReactiveFormsModule
 
   ],
