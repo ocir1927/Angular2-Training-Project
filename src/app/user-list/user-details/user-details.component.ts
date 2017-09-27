@@ -19,7 +19,6 @@ export class UserDetailsComponent implements OnInit {
       this.userDetails = userData;
     });
   }
-  
 
 }
 

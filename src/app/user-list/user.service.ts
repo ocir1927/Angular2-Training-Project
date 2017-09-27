@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http'
+import { Http, RequestOptions, URLSearchParams } from '@angular/http'
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
@@ -12,7 +12,7 @@ export class UserService {
 
   constructor(private http: Http) { }
 
-  getAllUsers(): Observable<User[]> {
+  getAllUsers(): Observable<any> {
     return this.http.get(this.baseURL + '/users').map(res => res.json());
   }
 
@@ -20,9 +20,17 @@ export class UserService {
     return this.http.get(this.baseURL + '/users/' + username).map(res => res.json());
   }
 
+  search(username: string) {
+    let params: URLSearchParams = new URLSearchParams();
+    params.append('q', username + ' in:login');
+    let requestOptions = new RequestOptions();
+    requestOptions.search = params;
+    return this.http.get(this.baseURL + '/search/users', requestOptions).map(res => res.json());
+  }
+
 }
 
-export interface User {
+export class User {
   login: string;
   id: number;
   avatar_url: string;
